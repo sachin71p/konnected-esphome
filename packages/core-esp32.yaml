@@ -11,11 +11,13 @@ esphome:
           id: device_id
           state: !lambda 'return get_mac_address();'
 
-esp32:  
-  board: wesp32
+esp32:
+  board: esp32-c6-devkitc-1
+  variant: ESP32C6
   framework:
     type: esp-idf
-    version: recommended
+    platform_version: 6.5.0
+    version: 5.1.0
 
 substitutions:
   status_led_inverted: "false"
